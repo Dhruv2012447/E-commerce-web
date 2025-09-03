@@ -1,0 +1,116 @@
+/* Overlay background */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* light overlay */
+  overflow-x: hidden;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.sidebar-overlay.open {
+  width: 100%;
+}
+
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 350px;
+  height: 100%;
+  background: #ffffff; /* light background */
+  color: #333; /* dark text */
+  padding: 20px;
+  box-shadow: -3px 0 15px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-left: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar-overlay.open .sidebar {
+  right: 0;
+}
+
+/* Close button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  float: right;
+}
+
+/* Cart items */
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px 5px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.cart-item:hover {
+  background: #f9f9f9;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.item-info p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.item-info span {
+  font-size: 14px;
+  color: #777;
+}
+
+.remove-btn {
+  background: #ff4d4d;
+  border: none;
+  color: #fff;
+  padding: 5px 8px;
+  margin-left: auto;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+hr {
+  border: 0.5px solid #eee;
+  margin: 15px 0;
+}
+
+/* Subtotal and checkout */
+.subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout-btn {
+  background: #4caf50;
+  border: none;
+  padding: 8px 12px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.empty-cart {
+  text-align: center;
+  margin-top: 20px;
+  color: #777;
+}
